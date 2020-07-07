@@ -1,0 +1,18 @@
+<app-addform-student (addStudent)="onAddStudent($event)"></app-addform-student>
+<div class="container-fluid">
+    <h5 class="mt-4">Фильтрация</h5>
+        <div class="row mb-3 " [formGroup]="filterGroup">
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Группа" formControlName="group">
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Направление" formControlName="course">
+          </div>
+        </div>
+    </div>
+    <hr>
+<app-table-students 
+(editStudent)="onEditStudent($event)"
+(deleteStudent)="onDeleteStudent($event)"
+
+></app-table-students>

@@ -1,0 +1,98 @@
+<div class="container-fluid">
+<div class="row" >
+    <div class="col-12">
+        <h5>{{title}}</h5>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" [style.width]="'25%'">Фамилия</th>
+            <th scope="col"[style.width]="'25%'">ИО</th>
+            <th scope="col"[style.width]="'25%'">Номер группы</th>
+            <th scope="col"[style.width]="'25%'">Направление</th>
+            <th scope="col"[style.width]="'50px'"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students">
+            <ng-container *ngIf="studentId == student.id" [formGroup]="formChange">
+              <td *ngIf="studentId == student.id">
+                Имя:<input type="text"
+                class="form-control"
+                placeholder="имя"
+                formControlName="name"
+                [(ngModel)]="name"/>
+
+                Фамилия:<input type="text"
+                class="form-control"
+                placeholder="Фамилия"
+                formControlName="surname"
+                [(ngModel)]="surname"/>
+              </td>
+              <td *ngIf="studentId == student.id">
+               Отчество:<input type="text"
+                class="form-control"
+                placeholder="Отчество"
+                formControlName="patronymic"
+                [(ngModel)]="patronymic"/>
+
+                Почта:<input type="text"
+                class="form-control"
+                placeholder="Почта"
+                formControlName="email"
+                [(ngModel)]="email"/>
+              </td>
+              <td *ngIf="studentId == student.id">
+                Телефон:<input type="text"
+                class="form-control"
+                placeholder="Телефон"
+                formControlName="phone"
+                [(ngModel)]="phone"/>
+
+                
+                Дата рождения:<input type="text"
+                class="form-control"
+                placeholder="DD.MM.YYYY"
+                formControlName="birth"
+                [(ngModel)]="birth"/>
+              </td>
+              <td *ngIf="studentId == student.id">
+                Группа:<input type="text"
+                class="form-control"
+                placeholder="Группа"
+                formControlName="group"
+                [(ngModel)]="group"/>
+
+                Направление:<input type="text"
+                class="form-control"
+                placeholder="Направление"
+                formControlName="course"
+                [(ngModel)]="course"/>
+              </td>
+              <td *ngIf="studentId == student.id">
+                <button class="btn btn-outline-secondary btn-sm"
+                (click)="onEditStudent(student.id)"
+                [disabled]="formChange.invalid"
+                >Редактировать</button>
+
+                <button class="btn btn-outline-danger btn-sm"
+                (click)="onDeleteStudent(student.id)"
+                >Удалить</button>
+
+              </td>
+            </ng-container>
+            
+            <td *ngIf="studentId != student.id">{{student.surname}}</td>
+            <td *ngIf="studentId != student.id">{{student.name.slice(0,1)}}.{{student.patronymic.slice(0,1)}}.</td>
+            <td *ngIf="studentId != student.id">{{student.group}}</td>
+            <td *ngIf="studentId != student.id">{{student.course}}</td>
+            <td *ngIf="studentId != student.id"><button 
+              class="btn btn-outline-secondary btn-sm"
+              (click)="onEditStudent(student.id)"
+              >Редактировать</button></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>

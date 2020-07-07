@@ -1,0 +1,48 @@
+{
+  "students": [
+    {
+      "name": "Илья",
+      "surname": "Макаров",
+      "patronymic": "Максимович",
+      "group": "181-324",
+      "phone": "79248631884",
+      "email": "IlMakarov@mail.ru",
+      "birth": "29.05.2000",
+      "course": "САПР",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Петр",
+      "surname": "Петров",
+      "patronymic": "Петрович",
+      "phone": "79168451986",
+      "email": "PPPetrov@mail.ru",
+      "birth": "05.12.2001",
+      "group": "181-325",
+      "course": "САПР"
+    },
+    {
+      "id": 3,
+      "name": "Федор",
+      "surname": "Фролов",
+      "patronymic": "Федорович",
+      "phone": "79752945198",
+      "email": "Fedorov2000@mail.ru",
+      "birth": "17.06.2000",
+      "group": "181-361",
+      "course": "ИнфоБез"
+    },
+    {
+      "id": 4,
+      "name": "Денис",
+      "surname": "Денисов",
+      "patronymic": "Денисович",
+      "phone": "79134168579",
+      "email": "Den0110@mail.ru",
+      "birth": "01.10.2000",
+      "group": "181-321",
+      "course": "ВЕБ"
+    }
+  ]
+}

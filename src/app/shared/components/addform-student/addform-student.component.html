@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h4>{{title}}</h4>
+        </div>
+        <form [formGroup]="StudentForm">
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Имя" formControlName="name"/>
+            </div>
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname"/>
+            </div> 
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Отчество" formControlName="patronymic"/>
+            </div> 
+             <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Телефон" formControlName="phone"/>
+            </div>  
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Почта" formControlName="email"/>
+            </div>
+           <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="DD.MM.YYYY" formControlName="birth"/>
+            </div>
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Направление" formControlName="course"/>
+            </div> 
+            <div class="col-12 my-2">
+                <input type="text" class="form-control" placeholder="Группа" formControlName="group"/>
+            </div> 
+        </form>
+        <div class="row mt-2">
+            <div class="col-6">
+                <button class="btn btn-outline-primary btn-sm" 
+                (click) = "onAddStudent()"
+                [disabled]="StudentForm.invalid">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
